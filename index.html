@@ -2,97 +2,230 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Custom print, signage, and design services from Datartech Digital Solutions. Bring your vision to life." />
-  <link rel="icon" href="favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Datartech Digital Solutions</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    html {
-      scroll-behavior: smooth;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #eef3f8;
+      text-align: center;
+      color: #333;
+    }
+
+    header {
+      background: #1e3a5f;
+      color: white;
+      padding: 1.5em 1em;
+    }
+
+    header img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      color: #cce3ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    section {
+      margin: 30px auto;
+      padding: 30px 20px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 1100px;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #1e3a5f;
+      margin-bottom: 25px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .services {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .service {
+      background: #e2e8f0;
+      border-left: 6px solid #1e90ff;
+      border-radius: 6px;
+      padding: 20px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .service i {
+      font-size: 22px;
+      color: #1e90ff;
+    }
+
+    .form-container input, .form-container button {
+      padding: 12px;
+      width: 90%;
+      max-width: 350px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    .form-container {
+      background-color: #f7faff;
+    }
+
+    .form-container button {
+      background: #1e90ff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .order-btn, .cart-btn {
+      margin: 30px 10px 0 10px;
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .order-btn {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .cart-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .contact a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #1e3a5f;
+      color: white;
+      padding: 1.5em 1em;
+    }
+
+    .download-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1e3a5f;
+      font-weight: bold;
     }
   </style>
 </head>
-<body class="bg-white text-gray-800">
+<body>
 
-  <!-- Navbar -->
-  <header class="sticky top-0 z-50 bg-white shadow-md">
-    <nav class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
-      <div class="text-blue-800 text-xl font-bold">Datartech</div>
-      <ul class="flex space-x-6 text-sm font-semibold text-gray-700">
-        <li><a href="#services" class="hover:text-blue-800 transition duration-300">Services</a></li>
-        <li><a href="#about" class="hover:text-blue-800 transition duration-300">About</a></li>
-        <li><a href="#contact" class="hover:text-blue-800 transition duration-300">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header id="home">
+  <img src="images/logo.png" alt="Datartech Logo">
+  <h1>Datartech Digital Solutions</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="downloads/brochure.pdf" download>Downloads</a>
+    <a href="#contact">Contact</a>
+    <a href="#signup">Sign Up</a>
+    <a href="#signin">Sign In</a>
+  </nav>
+</header>
 
-  <!-- Hero Section -->
-  <section class="bg-blue-800 text-white p-10 text-center">
-    <h1 class="text-4xl font-bold">Datartech Digital Solutions</h1>
-    <p class="text-xl mt-2">Bringing Your Vision to Life Through Custom Print & Design</p>
-    <a href="#services" class="mt-6 inline-block bg-white text-blue-800 px-6 py-2 rounded-full font-semibold hover:bg-blue-100 transition duration-300">Our Services</a>
-  </section>
+<section id="about">
+  <h2>About Datartech</h2>
+  <p>
+    <strong>Datartech Digital Solutions</strong> is your go-to destination for all digital, branding, and ICT services, based in Sabatia, Butere.
+    Founded in <strong>2010</strong> by <strong>Joseph Makomere</strong>, an ICT expert and educator, Datartech merges technology with creativity
+    to serve individuals, businesses, organizations, and institutions with excellence.
+  </p>
+  
+</section>
 
-  <!-- Services Section -->
-  <section id="services" class="p-10 bg-white">
-    <h2 class="text-3xl font-semibold text-center mb-6">Our Services</h2>
-    <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
-      <li class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-        <a href="banners.html">🎨 Banners & Posters</a>
-      </li>
-      <li class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-        <a href="murals.html">🖼️ Wall Wraps & Murals</a>
-      </li>
-      <li class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-        <a href="blueprints.html">📐 Architectural Blueprints</a>
-      </li>
-      <li class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-        <a href="signage.html">🎉 Event & Retail Signage</a>
-      </li>
-      <li class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-        <a href="graphics.html">✨ Custom Graphics & More</a>
-      </li>
-      <li class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-        <a href="photography.html">📷 Photography</a>
-      </li>
-      <li class="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition duration-300">
-        <a href="videography.html">🎥 Videography</a>
-      </li>
-    </ul>
-  </section>
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service"><i class="fas fa-sticky-note"></i> Banners & Stickers Printing</div>
+    <div class="service"><i class="fas fa-tshirt"></i> T-Shirt Printing & Branding</div>
+    <div class="service"><i class="fas fa-camera-retro"></i> Photography & Videography</div>
+    <div class="service"><i class="fas fa-globe"></i> Online Services & Digital Printing</div>
+    <div class="service"><i class="fas fa-laptop-code"></i> Computer Software Installation</div>
+    <div class="service"><i class="fas fa-video"></i> CCTV Installation</div>
+  </div>
+  <button class="order-btn">Order Service</button>
+  <button class="cart-btn">Add to Cart</button>
+</section>
 
-  <!-- About Section -->
-  <section id="about" class="p-10 bg-gray-50 text-center">
-    <h2 class="text-3xl font-semibold mb-4">About Us</h2>
-    <p class="max-w-2xl mx-auto text-lg">Datartech Digital Solution is your trusted partner in creative visual communications. We specialize in large-format prints, high-impact signage, and custom design solutions tailored for every business need.</p>
-  </section>
+<section id="signup" class="form-container">
+  <h2>Sign Up</h2>
+  <form>
+    <input type="text" placeholder="Full Name" required />
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Password" required />
+    <button type="submit">Create Account</button>
+  </form>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="p-10 text-center bg-blue-50">
-    <h2 class="text-3xl font-semibold mb-4">Get In Touch</h2>
-    <p class="mb-6">Email us at <a href="mailto:info@datartech.com" class="text-blue-600 underline">info@datartech.com</a></p>
-    <form class="max-w-md mx-auto space-y-4">
-      <div>
-        <label for="name" class="sr-only">Name</label>
-        <input id="name" name="name" type="text" placeholder="Your Name" class="w-full border p-2 rounded" required />
-      </div>
-      <div>
-        <label for="email" class="sr-only">Email</label>
-        <input id="email" name="email" type="email" placeholder="Your Email" class="w-full border p-2 rounded" required />
-      </div>
-      <div>
-        <label for="message" class="sr-only">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" class="w-full border p-2 rounded h-32" required></textarea>
-      </div>
-      <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-900 transition duration-300">Send Message</button>
-    </form>
-  </section>
+<section id="signin" class="form-container">
+  <h2>Sign In</h2>
+  <form>
+    <input type="email" placeholder="Email" required />
+    <input type="password" placeholder="Password" required />
+    <button type="submit">Login</button>
+  </form>
+</section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center p-4">
-    &copy; 2025 Datartech Digital Solution. All rights reserved.
-  </footer>
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Location:</strong> 145m Right from Sabatia Junction, Sabatia-Butere Road, Butere</p>
+  <p><strong>Phone:</strong> +254 726 238 623</p>
+  <p><strong>Email:</strong> <a href="mailto:datartechdigitalsolutions@gmail.com">datartechdigitalsolutions@gmail.com</a></p>
+  <p><strong>Founder:</strong> Joseph Makomere - Teacher & ICT Expert</p>
+  <p><strong>Online Shopping:</strong>
+    <a href="https://www.kilimall.co.ke/" target="_blank">Kilimall</a> |
+    <a href="https://www.jumia.co.ke/" target="_blank">Jumia</a>
+  </p>
+</section>
+
+<footer>
+  &copy; 2025 Datartech Digital Solutions. All rights reserved.
+</footer>
 
 </body>
 </html>
